@@ -12,8 +12,11 @@ const Header = () => {
 					<Link href={""}>Menu</Link>
 					<Link href={""}>About</Link>
 					<Link href={""}>Contact</Link>
+				</nav>
+				<nav>
+					<Link href={""}>Login</Link>
 					<Link href={""} className="bg-primary rounded-full text-white px-6 py-2 hover:bg-green-700 transition-all">
-						Login
+						Register
 					</Link>
 				</nav>
 			</header>
