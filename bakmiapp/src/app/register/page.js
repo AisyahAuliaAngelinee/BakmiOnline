@@ -1,13 +1,19 @@
+"use client";
+
 import Image from "next/image";
+import { useState } from "react";
 
 const Register = () => {
+	const [email, setEmail] = useState("");
+	const [password, setPassword] = useState("");
+
 	return (
 		<>
 			<section className="mt-8">
 				<h1 className="text-center text-primary text-4xl font-semibold mb-4">Register</h1>
 				<form className="block max-w-xs mx-auto">
-					<input type="text" placeholder="Email" />
-					<input type="password" placeholder="Password" />
+					<input type="text" placeholder="Email" value={email} onChange={(e) => setEmail(e.target.value)} />
+					<input type="password" placeholder="Password" value={password} onChange={(e) => setPassword(e.target.value)} />
 					<button type="submit">Register</button>
 					<div className="my-4 text-center text-gray-500">or Login with other account</div>
 					<button className="flex gap-4 justify-center">
