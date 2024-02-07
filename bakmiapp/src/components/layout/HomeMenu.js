@@ -18,10 +18,10 @@ const HomeMenu = () => {
 				</div>
 				<div className="grid grid-cols-3 gap-4">
 					<div className="bg-gray-300 p-4 rounded-lg text-center">
-						<img src="" alt="bakmi" />
-						<h4 className="font-semibold my-2">Bakmi</h4>
+						<img src="/kategori-1.png" alt="bakmi" />
+						<h4 className="font-semibold text-xl my-2">Bakmi</h4>
 						<p className="text-gray-500 text-sm">Lorem ipsum bakmi sit amet</p>
-						<button className="bg-primary text-white rounded-full px-4 py-2 hover:bg-green-800">Add to cart Rp.15.000,00</button>
+						<button className="bg-primary text-white rounded-full px-6 py-2 hover:bg-red-500">Add to cart Rp.15.000,00</button>
 					</div>
 				</div>
 			</section>
