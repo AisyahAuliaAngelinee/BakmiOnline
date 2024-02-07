@@ -4,12 +4,12 @@ const HomeMenu = () => {
 	return (
 		<>
 			<section className="">
-				<div className="absolute right-0 left-0">
-					<div className="h-48 w-48 left-0 absolute">
-						<Image src={"/sallad1.png"} layout={"fill"} objectFit={"contain"} alt={"salad-1"} />
+				<div className="absolute h-full right-0 left-0 w-full justify-start">
+					<div className="absolute left-0 -top-12 text-left">
+						<Image src={"/sallad1.png"} width={109} height={189} alt={"salad-1"} />
 					</div>
-					<div className="h-48 w-48 right-0 absolute">
-						<Image src={"/sallad2.png"} layout={"fill"} objectFit={"contain"} alt={"salad-2"} />
+					<div className="absolute right-0 -top-24 -z-10">
+						<Image src={"/sallad2.png"} width={107} height={195} alt={"salad-2"} />
 					</div>
 				</div>
 				<div className="text-center">
