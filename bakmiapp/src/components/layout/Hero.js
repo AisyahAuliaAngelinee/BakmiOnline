@@ -5,7 +5,7 @@ const Hero = () => {
 	return (
 		<>
 			<section className="grid grid-cols-2">
-				<div className="py-8">
+				<div className="py-12">
 					<h1 className="text-4xl font-semibold">Everyday will better with Bakmi</h1>
 					<p className="my-4 text-gray-500">100% Halal no pork, Certified Bakmi with Scholarship Approved. Want to live healthy? eat Bakmi all the time</p>
 					<div className="flex gap-4 text-sm">
