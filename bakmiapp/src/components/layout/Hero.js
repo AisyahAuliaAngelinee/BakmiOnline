@@ -7,9 +7,11 @@ const Hero = () => {
 			<section className="hero">
 				<div className="py-12">
 					<h1 className="text-4xl font-semibold">
-						Everyday will better with <span className="text-primary">BAKMI ONLINE</span>
+						Everyday
+						<br />
+						will better with <span className="text-primary">BAKMI ONLINE</span>
 					</h1>
-					<p className="my-4 text-gray-500">100% Halal no pork, Certified Bakmi with Scholarship Approved. Want to live healthy? eat Bakmi all the time</p>
+					<p className="my-6 text-gray-500">100% Halal no pork, Certified Bakmi with Scholarship Approved. Want to live healthy? eat Bakmi all the time</p>
 					<div className="flex gap-4">
 						<button className="flex gap-2 bg-primary text-white uppercase font-semibold items-center px-4 py-2 rounded-full hover:bg-blue-500">
 							Order Now <Right />
