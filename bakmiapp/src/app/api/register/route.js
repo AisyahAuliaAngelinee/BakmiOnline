@@ -1,5 +1,3 @@
-const POST = (req) => {
-	return <></>;
-};
-
-export default POST;
+export function POST(req) {
+	return Response.json("ok");
+}

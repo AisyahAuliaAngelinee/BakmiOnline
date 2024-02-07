@@ -7,12 +7,23 @@ const Register = () => {
 	const [email, setEmail] = useState("");
 	const [password, setPassword] = useState("");
 
+	function handleSubmitForm(e) {
+		e.preventDefault();
+		fetch("/api/register", {
+			method: "POST",
+			body: JSON.stringify({ email, password }),
+			headers: {
+				"Content-Type": "application/json",
+			},
+		});
+	}
+
 	return (
 		<>
 			<section className="mt-8">
 				<h1 className="text-center text-primary text-4xl font-semibold mb-4">Register</h1>
-				<form className="block max-w-xs mx-auto">
-					<input type="text" placeholder="Email" value={email} onChange={(e) => setEmail(e.target.value)} />
+				<form className="block max-w-xs mx-auto" onSubmit={handleSubmitForm}>
+					<input type="email" placeholder="Email" value={email} onChange={(e) => setEmail(e.target.value)} />
 					<input type="password" placeholder="Password" value={password} onChange={(e) => setPassword(e.target.value)} />
 					<button type="submit">Register</button>
 					<div className="my-4 text-center text-gray-500">or Login with other account</div>
