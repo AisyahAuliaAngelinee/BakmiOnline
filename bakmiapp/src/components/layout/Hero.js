@@ -13,7 +13,7 @@ const Hero = () => {
 					</h1>
 					<p className="my-6 text-gray-500">100% Halal no pork, Certified Bakmi with Scholarship Approved. Want to live healthy? eat Bakmi all the time</p>
 					<div className="flex gap-4">
-						<button className="flex gap-2 bg-primary text-white uppercase font-semibold items-center px-4 py-2 rounded-full hover:bg-blue-500">
+						<button className="flex gap-2 bg-primary text-white uppercase font-semibold items-center px-4 py-2 rounded-full hover:bg-blue-500 transition-all">
 							Order Now <Right />
 						</button>
 						<button className="flex gap-2 py-2 text-gray-500 font-semibold text-sm items-center">
