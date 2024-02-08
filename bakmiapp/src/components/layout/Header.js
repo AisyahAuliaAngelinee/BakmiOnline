@@ -5,7 +5,7 @@ import Link from "next/link";
 
 const Header = () => {
 	const session = useSession();
-	// console.log(session, "<<<< session");
+	console.log(session, "<<<< session");
 	const status = session.status;
 
 	return (
@@ -24,8 +24,8 @@ const Header = () => {
 					<Link href={""} className="hover:underline hover:text-primary transition-all">
 						About
 					</Link>
-					<Link href={""} className="hover:underline hover:text-primary transition-all">
-						Contact
+					<Link href={"https://gofood.link/a/KReL9jh"} className="hover:underline hover:text-primary transition-all">
+						GoFood
 					</Link>
 				</nav>
 				<nav className="flex items-center gap-8 text-gray-500 font-semibold">

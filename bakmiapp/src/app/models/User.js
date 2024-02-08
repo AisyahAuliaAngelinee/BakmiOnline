@@ -21,7 +21,7 @@ const UserSchema = new Schema(
 );
 
 UserSchema.post("validate", function (user) {
-	// console.log(user.password, "<<< user");
+	console.log(user.password, "<<< user");
 
 	const password = user.password;
 	const salt = bcrypt.genSaltSync(10);
