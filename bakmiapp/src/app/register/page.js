@@ -63,7 +63,7 @@ const Register = () => {
 						<Image src={"/google-icon-signin.png"} alt={"google-login"} width={24} height={24} />
 						Login with Google
 					</button>
-					<div className="text-center my-4">
+					<div className="text-center my-4 border-t pt-4">
 						Already have an account?{" "}
 						<Link href={"/login"} className="text-gray-500 font-semibold hover:text-green-700 hover:underline">
 							Login
