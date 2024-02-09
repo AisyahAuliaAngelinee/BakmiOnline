@@ -6,7 +6,13 @@ import Link from "next/link";
 const Header = () => {
 	const session = useSession();
 	console.log(session, "<<<< session");
+
 	const status = session?.status;
+	const userData = session.data?.user;
+	let userName = userData?.name || userData?.email;
+	if (userName && userName.includes(" ")) {
+		userName = userName.split(" ")[0];
+	}
 
 	return (
 		<>
@@ -24,15 +30,20 @@ const Header = () => {
 					<Link href={""} className="hover:underline hover:text-primary transition-all">
 						About
 					</Link>
-					<Link href={"https://gofood.link/a/KReL9jh"} className="hover:underline hover:text-primary transition-all">
-						GoFood
+					<Link href={""} className="hover:underline hover:text-primary transition-all">
+						Contact
 					</Link>
 				</nav>
 				<nav className="flex items-center gap-8 text-gray-500 font-semibold">
 					{status === "authenticated" && (
-						<button className="bg-primary rounded-full text-white px-6 py-2 hover:bg-green-700 transition-all" onClick={() => signOut()}>
-							Logout
-						</button>
+						<>
+							<Link href={"/profile"} className="whitespace-nowrap">
+								Hello, {userName}
+							</Link>
+							<button className="bg-primary rounded-full text-white px-6 py-2 hover:bg-green-700 transition-all" onClick={() => signOut()}>
+								Logout
+							</button>
+						</>
 					)}
 					{status !== "authenticated" && (
 						<>
