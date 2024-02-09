@@ -3,13 +3,13 @@
 import { useSession } from "next-auth/react";
 import Image from "next/image";
 import { redirect } from "next/navigation";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 const Profile = () => {
 	const session = useSession();
 	console.log(session, "<<<<< SESSIONNSS");
 
-	const [userName, setUserName] = useState(session?.data?.user?.name || "");
+	const [userName, setUserName] = useState("");
 	const { status } = session;
 
 	if (status === "loading") {
@@ -30,6 +30,12 @@ const Profile = () => {
 			body: JSON.stringify({ name: userName }),
 		});
 	}
+
+	useEffect(() => {
+		if (status === "authenticated") {
+			setUserName(session.data.user.name);
+		}
+	}, [session, status]);
 
 	return (
 		<>
