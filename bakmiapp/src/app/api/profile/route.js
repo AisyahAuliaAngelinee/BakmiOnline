@@ -12,9 +12,17 @@ export async function PUT(req) {
 	const email = session.user.email;
 	// const user = await User.findOne({ email });
 
+	console.log(data, "<<< data");
 	if ("name" in data) {
 		// update the username
-		await User.updateOne({ email }, { name: data.name });
+		const user = await User.findOne({ email });
+		console.log(user, "<<<<<NANEMEMEM");
+		user.name = data.name;
+		await user.save();
+		console.log({ email, update: { name: data.name } }, "<<< email");
+
+		// const result = await User.updateOne({ email }, { name: data.name });
+		// console.log(result, "<<< resultttt");
 	}
 
 	return Response.json(true);
