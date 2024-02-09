@@ -6,7 +6,7 @@ import Link from "next/link";
 const Header = () => {
 	const session = useSession();
 	console.log(session, "<<<< session");
-	const status = session.status;
+	const status = session?.status;
 
 	return (
 		<>

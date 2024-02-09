@@ -2,7 +2,7 @@
 import { MongoClient } from "mongodb";
 
 if (!process.env.MONGO_CONNECTION_STRING) {
-	throw new Error('Invalid/Missing environment variable: "MONGODB_URI"');
+	throw new Error('Invalid/Missing environment variable: "MONGO_CONNECTION_STRING"');
 }
 
 const uri = process.env.MONGO_CONNECTION_STRING;
