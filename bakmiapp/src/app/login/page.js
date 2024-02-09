@@ -14,7 +14,7 @@ const Login = () => {
 		e.preventDefault();
 		setLogin(true);
 
-		const response = await signIn("credentials", { email, password });
+		const response = await signIn("credentials", { email, password, callbackUrl: "/" });
 		console.log(response, "<><><><><><");
 
 		setLogin(false);
@@ -31,7 +31,7 @@ const Login = () => {
 						Login
 					</button>
 					<div className="my-4 text-center text-gray-500">or Login with other account</div>
-					<button className="flex gap-4 justify-center" onClick={() => signIn("google")}>
+					<button className="flex gap-4 justify-center" onClick={() => signIn("google", { callbackUrl: "/" })}>
 						<Image src={"/google-icon-signin.png"} alt={"google-login"} width={24} height={24} />
 						Login with Google
 					</button>
